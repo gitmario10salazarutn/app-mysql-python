@@ -160,7 +160,7 @@ def get_educationbyuser(id):
             })
         else:
             return jsonify({
-                'message': 'Language not found!',
+                'message': 'Education not found!',
                 'token': None
             })
     except Exception as ex:
