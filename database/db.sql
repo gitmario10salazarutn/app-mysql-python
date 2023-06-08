@@ -204,3 +204,15 @@ update knowledge_level set name_levknowledge = 'Advanced level of knowledge' whe
 update knowledge_level set name_levknowledge = 'Expert knowledge level' where id_knowledge_level = 5;
 
 select*from language_learned;
+
+create table education (
+id_education integer auto_increment not null,
+institution varchar(100) not null,
+major varchar(100) not null,
+year_start integer not null,
+year_end integer not null,
+description varchar(500) not null,
+user_education integer not null,
+constraint pk_education primary key(id_education),
+constraint fk_user_education foreign key(user_education) references users(id_user)
+);
